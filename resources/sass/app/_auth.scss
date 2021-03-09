@@ -1,0 +1,35 @@
+.auth-card {
+    background: $bblue;
+    border: 1px solid $bblue2;
+    box-shadow: 0 0 10px 0 $bblue2;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+
+    @media screen and (min-width: 992px){
+        margin: 100px auto;
+    }
+
+    .logo {
+        img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+    }
+    .card-header {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .bt-outline {
+        justify-content: center;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    input:not([type=checkbox]) {
+        border: 1px solid $bblue2;
+        padding: 6px;
+        width: 100%;
+    }
+}

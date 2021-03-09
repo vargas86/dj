@@ -1,0 +1,417 @@
+.channel-cover {
+    background-color: $bblue;
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: 320px){
+        padding-top: 25%;
+    }
+
+    &.empty {
+        background-color: $sblue;
+        padding-top: 80px;
+        a {
+            color: $bblue !important;
+        }
+    }
+
+    .social-media {
+        bottom: 2px;
+        position: absolute;
+        right: 10px;
+        a {
+            color: $black;
+            font-size: 24px;
+            &:not(:last-child) {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+.channel-header-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 0 10px 2px lighten($sblue, 25);
+    overflow: hidden;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.channel-header {
+    align-items: center;
+    background: lighten($sblue, 38);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .channel-ov {
+        align-items: center;
+        display: flex;
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .img {
+        background: $bblue;
+        border-radius: 50%;
+        box-shadow: 0 0 8px 1px lighten($sblue, 35);
+        display: none;
+        height: 70px;
+        margin-right: 10px;
+        overflow: hidden;
+        width: 70px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        @media screen and (min-width: 480px){
+            display: block;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    button {
+        display: block;
+        sup {
+            color: darken($lgrey, 10);
+            display: block;
+            font-weight: 600;
+            margin-top: 10px;
+            text-transform: lowercase;
+        }
+    }
+}
+
+.channel-nav {
+    background: lighten($sblue, 35);
+    display: flex;
+    width: 100%;
+    a {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        display: inline-block;
+        font-size: 9px;
+        font-weight: 700;
+        padding: 4px 8px;
+        text-align: center;
+
+        @media screen and (min-width: 480px){
+            font-size: 11px;
+            min-width: 100px;
+            padding: 6px 20px;
+            text-transform: uppercase;
+        }
+
+        &.active {
+            border-bottom-color: $black;
+            color: $black;
+        }
+    }
+}
+
+//Courses
+.channel-courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.course-ov {
+    box-shadow: 0 0 8px 0 $bblue2;
+    border: 1px solid $bblue2;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+
+    @media screen and (min-width: 992px){
+        flex-direction: row;
+    }
+    
+    .course-thumb {
+        height: 0;
+        margin-bottom: 10px;
+        margin-right: 0px;
+        overflow: hidden;
+        padding-top: 56%;
+        position: relative;
+        
+        img {
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+        @media screen and (min-width:992px){
+            flex: 0 0 35%;
+            margin-bottom: 0;
+            margin-right: 20px;
+            padding-top: 19.6%;
+        }
+        
+        @media screen and (min-width: 1400px){
+            flex: 0 0 25%;
+            padding-top: 14%;
+        }
+    }
+
+    .course-info {
+        display: flex;
+        flex-direction: column;
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-self: flex-end;
+            margin-top: auto;
+
+            li {
+                align-items: center;
+                background: lighten($sblue, 38);
+                border-radius: 30px;
+                display: inline-flex;
+                margin-right: 10px;
+                padding: 7px 20px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+
+                &:not(:last-child) {
+                    margin-bottom: 7px;
+                }
+                
+                i {
+                    color: $sblue;
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+                span {
+                    font-weight: 700;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+//Videos
+.channel-videos {
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media screen and (min-width: 992px){
+        margin-top: 10px;
+    }
+
+    .video-ov {
+        margin:  10px;
+        width: 100%;
+
+        @media screen and (min-width: 576px){
+            margin: 7px;
+            width: 47%;
+        }
+
+        @media screen and (min-width: 992px){
+            margin: 4px;
+            width: 32%;
+        }
+
+        @media screen and (min-width: 1200px){
+            width: 20%;
+        }
+
+        h6 {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+//About
+.channel-about {
+    margin-top: 20px;
+    hr {
+        margin: 30px 0;
+    }
+    p, li { color: $grey;}
+    h5 {color: darken($grey, 10);}
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.about-list {
+    li {
+        align-items: center;
+        display: flex;
+        margin-bottom: 3px;
+    }
+    i {
+        color: $sblue;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    strong {
+        margin-right: 4px;
+    }
+    &.social-media {
+        i {
+            @media screen and (min-width: 992px){
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+.about-sm {
+    border-top: 1px solid $lgrey;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    padding-top: 30px;
+    @media screen and (min-width: 992px){
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.channel-calendar {
+    margin-top: 20px
+}
+
+.app-layout .fc {
+    .fc-button-primary,
+    .fc-button-primary:disabled {
+        background-color: $sblue;
+        border: 1px solid darken($sblue, 10);
+    }
+
+
+
+    .fc-button-primary:hover {
+        background-color: darken($sblue, 10);
+    }
+
+}
+
+.channel-subscribe {
+    .sub-header {
+        align-items: center;
+        background: lighten($sblue, 40);
+        border-radius: 8px;
+        display: flex;
+        margin-bottom: 20px;
+        padding: 12px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        
+        .avatar {
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            width: 50px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            @media screen and (min-width: 768px){
+                height: 80px;
+                width: 80px;
+            }
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .sub-formula {
+        align-items: center;
+        border: 1px solid $bblue2;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 100%;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+
+        @media screen and (min-width: 768px) {
+            padding: 15px;
+        }
+
+        &.selected {
+            border: 1px solid $sblue;
+            box-shadow: 0 0 2px 2px $sblue;
+        }
+
+        h4 {
+            margin-bottom: 4px;
+        }
+        .price {
+            font-size: 1.2em;
+            sup {
+                color: $sblue;
+                font-size: inherit;
+            }
+        }
+        p{
+            color: $grey;
+            font-style: italic;
+        }
+        
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+            li {
+                color: $grey;
+                font-style: italic;
+            }
+        }
+
+    }
+}
+
+.channel-map-container {
+    #map {
+        height: 400px;
+    }
+    
+}

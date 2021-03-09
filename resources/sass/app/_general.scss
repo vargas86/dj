@@ -1,0 +1,474 @@
+html,
+body {
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $bblue2;;
+}
+
+a {
+    color: $grey;
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+button {
+    border: none;
+    outline: none
+}
+
+div,
+p, 
+a,
+span,
+li,
+input, 
+textarea,
+label,
+select,
+option {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 12px;
+}
+
+h5,
+h6 {
+    font-family: $font;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 15px;
+}
+
+h6 {
+    font-size: 13px;
+}
+
+p {
+    margin: 0;
+}
+
+.d-none {display: none !important;}
+
+@for $i from 1 through 10 {
+    .mb-#{$i} {
+        margin-bottom: #{$i}em !important;
+    }
+}
+
+@for $i from 1 through 10 {
+    .mt-#{$i} {
+        margin-top: #{$i}em !important;
+    }
+}
+
+input[type=file].form-control {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+}
+
+.text-center {text-align: center !important;}
+
+.form-group {
+    a {
+        align-items: center;
+        background: $lgrey;
+        border-radius: 6px;
+        display: inline-flex;
+        font-weight: 700;
+        padding: 10px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        i {
+            font-size: 20px;
+            margin-right: 7px;
+        }
+    }
+}
+
+.bt {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    font-family: $font;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 6px 12px;
+    text-transform: uppercase;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+
+    i {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+}
+
+.bt-block {
+    display: block;
+    width: 100%;
+}
+
+.bt-1 {
+    background: $black;
+    color: $white;
+    &:hover {
+        color: $white;
+    }
+}
+
+.bt-inverted {
+    background: $white;
+    color: $black;
+}
+
+.bt-danger {
+    background: $red;
+    color: $white;
+    &:hover {
+        background: $red;
+        color: $white;
+    }
+}
+
+.bt-success {
+    background: $green !important;
+    color: $white;
+    &:hover {
+        background: $green !important;
+        color: $white;
+    }
+}
+
+.bt-stream i{color: $red;}
+
+.bt-grey {
+    background: none;
+    border: 2px solid $grey;
+    color: $grey;
+    &.dashed {
+        border-style: dashed;
+    }
+}
+
+
+.bt-l {
+    @media screen and (min-width: 992px){
+        font-size: 14px;
+    }
+}
+
+.bt-outline {
+    background: transparent;
+    border: 2px solid $black;
+    color: $black;
+    transition-property: color, background;
+    transition-duration: .3s;
+
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+}
+
+.bt-outline-white {
+    background: transparent;
+    border: 2px solid $white;
+    color: $white;
+    padding: 6px 30px;
+}
+
+.bt-disciple {
+    background: $black;
+    border-radius: 3px;
+    color: $white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.c-red {color: $red !important;}
+.c-green {color: $green !important;}
+.border-red {border: 1px solid $red !important;}
+.border-green {border: 1px solid $green !important;}
+
+p.more {
+    text-align: right;
+    a {
+        color: $sblue;
+        &:hover {
+            text-decoration: underline;
+        }        
+    }
+}
+
+.custom-checkbox {
+    display: flex;
+    input {
+        display: none;
+    }
+
+    label {
+        align-items: center;
+        box-shadow: 0 0 6px 2px transparent;
+        border-radius: 3px;
+        border: 1px solid $grey;
+        cursor: pointer;
+        display: flex;
+        height: 16px;
+        justify-content: center;
+        margin-right: 7px;
+        transition: box-shadow .3s ease;
+        position: relative;
+        width: 16px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        -webkit-transition: box-shadow .3s ease;
+        -moz-transition: box-shadow .3s ease;
+        -ms-transition: box-shadow .3s ease;
+        -o-transition: box-shadow .3s ease;
+        
+        &:hover {
+            box-shadow: 0 0 6px 2px $sblue;
+        }
+    }
+
+    input:checked+label {
+        &:before {
+            content: '\e9c3';
+            font-size: 28px;
+            font-family: unicons-line;
+        }
+    }
+}
+
+
+.simple-modal {
+    align-items: center;
+    background: transparentize($black, 0.5);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    form {
+        background: $white;
+        box-shadow: 0 0 8px 0 $black;
+        border-radius: 10px;
+        max-width: 480px;
+        width: 90%;
+        padding: 20px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+}
+
+.pagination {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+    li {
+      margin-right: 4px;  
+    }
+
+    a {
+        align-items: center;
+        background: $black;
+        border-radius: 50%;
+        border: 2px solid $black;
+        color: $white;
+        display: inline-flex;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        &.active {
+            background: $white;
+            color: $black;
+            border-color: $black;
+        }
+    }
+}
+
+.ajax-progress {
+    .progress {
+        background: $bblue;
+        border-radius: 3px;
+        border: 1px solid $bblue2;
+        height: 7px;
+        overflow: hidden;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        .bar {
+            background: $sblue;
+            height: 100%;
+            transition: width .3s ease;
+            width: 0;
+            -webkit-transition: width .3s ease;
+            -moz-transition: width .3s ease;
+            -ms-transition: width .3s ease;
+            -o-transition: width .3s ease;
+        }
+    }
+    .ajax-error {
+        i,
+        small {color: $red;}
+    }
+    .ajax-success {
+        i,
+        small {color: $green;}
+    }
+}
+
+.breadcrumbs {
+    align-items: center;
+    background: $lgrey;
+    border-radius: 4px;
+    display: flex;
+    padding: 4px 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+    li {
+        align-items: center;
+        display: inline-flex;
+        position: relative;
+        text-transform: uppercase;
+        
+        a {
+            color: $sblue;
+            font-size: 70%;
+            font-weight: 700;
+            @media screen and (min-width: 768px){
+                font-size: 80%;
+            }
+        }
+
+        &:last-child {
+            a {
+                color: $grey;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 5px;
+            &:after {
+                content: "\eb6d";
+                font-family: unicons-line;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.alert {
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+
+    @media screen and (min-width: 768px){
+        font-size: 13px;
+    }
+}
+
+.alert-success {
+    background: lighten($sblue, 40);
+    border: 1px solid $sblue;
+    color: $sblue;
+}
+
+
+.alert-danger {
+    background: $brown;
+    border: 1px solid darken($brown, 60);
+    color: darken($brown, 60);
+}
+
+
+.error-page {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: center;
+    text-align: center;
+
+    img {
+        max-width: 300px;
+        width: 70%;
+    }
+}
+
+
+/*
+* ===========================
+* KEYFRAMES
+* ===========================
+*/
+
+
+
+
+@keyframes flicker {
+    0% {
+        box-shadow: 0 0 0 0 $red;
+    }
+
+    66% {
+        box-shadow: 0 0 10px 0 $red;
+    }
+
+}

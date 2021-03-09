@@ -1,0 +1,161 @@
+.profile {
+    section {
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 $bblue2;
+        margin-bottom: 20px;
+        padding: 10px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        
+        hr {
+            margin: 20px 0;
+        }
+    }
+
+
+    .user-info {
+        .img {
+            background: $lgrey;
+            border-radius: 50%;
+            height: 200px;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            width: 200px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .info-list {
+            li:first-child>a {
+                background: lighten($sblue, 40);
+                border: 1px solid lighten($sblue, 20);
+                border-radius: 4px;
+                padding: 4px;
+                -webkit-border-radius: 4px;
+                -moz-border-radius: 4px;
+                -ms-border-radius: 4px;
+                -o-border-radius: 4px;
+            }
+
+            li, a {
+                align-items: center;
+                display: flex;
+
+                i {
+                    font-size: 18px;
+                    margin-right: 4px;
+                }
+
+                strong {
+                    margin-right: 10px;
+                }
+
+                span {
+                    color: lighten($grey, 15);
+                    margin-left: auto;
+                }
+            }
+        }
+
+        a {
+            color: $sblue;
+            display: block;
+            font-weight: 700;
+            margin-top: 20px;
+            text-align: right;
+            width: 100%;
+        }
+    
+    }
+
+    .profile-revenue {
+        h3{
+            display: flex;  
+            span {
+                color: lighten($grey, 15);
+                margin-right: auto;
+            }
+        }
+    }
+
+}
+.profile-edit {
+    h3 {
+        background: lighten($sblue, 35);
+        border-radius: 4px;
+        padding: 8px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
+    }
+
+    .actions {
+        display: flex;
+        
+        button, 
+        a {
+            justify-content: center;
+            min-width: 100px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+    }
+}
+
+.location-info {
+    align-items: center;
+    background: lighten($sblue, 45);
+    border: 1px solid lighten($sblue, 35);
+    border-radius: 4px;
+    display: flex;
+    margin: 25px 0 5px;
+    max-width: 1200px;
+    padding: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    i {
+        color: $sblue;
+        font-size: 20px;
+    }
+}
+
+.profile-map-container {
+    max-width: 1200px;
+    padding-top: 56%;
+    position: relative;
+    &>div {
+        background: $lgrey;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    @media screen and (min-width: 1200px){
+        padding-top: 672px;
+    }
+}

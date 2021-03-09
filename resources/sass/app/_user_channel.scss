@@ -1,0 +1,382 @@
+.creator-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    @media screen and (min-width: 480px){
+        flex-direction: row;
+    }
+
+    a {
+        padding: 2px 20px;        
+        &:not(:last-child) {
+            margin-bottom: 5px;
+            @media screen and (min-width: 480px){
+                margin-right: 5px;
+                margin-bottom: 0;
+            }
+        }
+    
+    }
+}
+
+.manage-courses {
+    h2 {
+        margin: 30px 0;
+    }
+}
+
+.course-create {
+    margin-top: 20px;
+}
+
+.courses-table {
+    thead {
+        display: none;
+        @media screen and (min-width: 992px){
+            display: table-header-group;
+        }
+    }
+    
+    tbody {
+        display: block;
+        padding: 20px 0;
+
+        @media screen and (min-width: 992px){
+            display: table-row-group;
+            padding: 0;
+        }
+
+        tr {
+            border-radius: 4px;
+            box-shadow: 0 0 8px 0 darken($lgrey, 10);
+            display: block;
+            margin: 5px 5px 10px;
+            padding: 10px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+
+            @media screen and (min-width: 992px){
+                box-shadow: none;
+                display: table-row;
+            }
+        }
+        
+        td {
+            display: block;
+            @media screen and (min-width: 992px){
+                strong {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 992px){
+                display: table-cell;
+            }
+
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+
+    .course {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 480px){
+            flex-direction: row;
+        }
+        .thumbnail {
+            background: $grey;
+            flex: 0 0 auto;
+            height: auto;
+            margin-bottom: 5px;
+            width: 100%;
+            @media screen and (min-width: 480px){
+                height: calc(120px * 0.58);
+                margin-right: 7px;
+                margin-bottom: 0;
+                width: 120px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        h4 {
+            margin: 0;
+        }
+    }
+    .actions {
+        border: 0;
+        display: flex;
+        a {
+            flex: 0;
+            &:not(:last-child) {
+                margin-right: 4px;
+            }
+        }
+    }
+}
+
+.course-management {
+    section {
+        margin-bottom: 40px;
+
+        .intro {
+            background: $black;
+            border-radius: 6px;
+            cursor: grabbing;
+            margin: 10px 0;
+            padding: 10px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+
+            h4,
+            p {
+                color: $white;
+            }
+        }
+
+        .bt-grey {
+            display: block;
+            padding: 20px;
+            text-align: center;
+        }
+
+    }
+
+    .video-list {
+
+        li {
+            align-items: center;
+            background: $white;
+            border: 1px solid $lgrey;
+            border-radius: 6px;
+            box-shadow: 0 0 4px 1px $bblue2;
+            display: flex;
+            margin: 20px 0;
+            padding: 10px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+
+            &>div {
+                cursor: grabbing;
+                display: flex;
+                margin-right: 10px;
+                
+                img {
+                    background: $grey;
+                    display: block;
+                    height: 90px;
+                    margin-right: 10px;
+                    width: 150px;
+                }
+                h4, p {
+                    margin: 0;
+                }
+                span {
+                    align-items: center;
+                    background: lighten($bblue3, 6);
+                    border-radius: 4px;
+                    display: flex;
+                    margin-top: 5px;
+                    padding: 4px 8px;
+                    width: 100%;
+                    -webkit-border-radius: 4px;
+                    -moz-border-radius: 4px;
+                    -ms-border-radius: 4px;
+                    -o-border-radius: 4px;
+                    i {
+                        font-size: 20px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+
+            .actions {
+                margin-left: auto;
+                a {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+.scheduled-stream {
+    background: $white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 1px $bblue2;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    
+    @media screen and (min-width: 768px){
+        flex-direction: row;
+    }
+
+    .thumbnail {
+        background: $lgrey;
+        flex: 0 0 auto;
+        height: 56%;
+        margin-right: 10px;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 768px){
+            height: calc(300px * .56);
+            width: 300px;
+        }
+    }
+    
+    h4 {
+        margin-bottom: 5px;
+    }
+
+    .bt-muted {
+        margin: 7px 0 20px;
+    }
+
+    .actions {
+        display: flex;
+        .bt:not(:last-child){margin-right: 6px;}
+    }
+}
+
+.channel-idle,
+.channel-ready {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    max-width: 800px;
+    img {
+        width: 100%;
+    }
+    p, h3, a {
+        text-align: center;
+    }
+}
+
+
+.activation-tracker {
+    display: flex;
+    margin: 0 auto 30px;
+    max-width: 800px;    
+
+    li {
+        position: relative;
+        &:not(:last-child) {
+            flex: 1;
+            &:before {
+                background: $lgrey;
+                content: "";
+                height: 3px;
+                right: 0;
+                position: absolute;
+                top: calc(50% - 1px);
+                width: calc(100% - 25px);
+            }
+        }
+    }
+    
+    span {
+        align-items: center;
+        background: $lgrey;
+        border-radius: 50%;
+        color: $grey;
+        display: flex;
+        font-size: 15px;
+        font-weight: 700;
+        height: 25px;
+        justify-content: center;
+        width: 25px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+    }
+
+    li:first-child {
+        span {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    &.step-2,
+    &.step-3 {
+        li:nth-child(2) {
+            span {
+                background: $black;
+                color: $white;
+            }
+        }
+        li:first-child:before {
+            background: $black;
+        }
+    }
+
+    &.step-3 {
+        li:nth-child(3) {
+            span {
+                background: $black;
+                color: $white;
+            }
+        }
+
+        li:nth-child(2):before {
+            background: $black;
+        }
+    }
+
+
+}
+
+.channel-terms {
+    border: 1px solid $lgrey;
+    box-shadow: 0 0 10px 0 $lgrey inset;
+    border-radius: 8px;
+    max-height: 600px;
+    overflow-y: scroll;
+    padding: 20px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    
+    article {
+        margin-bottom: 40px;
+    }
+}
+
+.activate-form {
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 $grey;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    width: 90%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    h3, .img {
+        text-align: center;
+    }
+}

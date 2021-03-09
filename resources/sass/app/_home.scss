@@ -1,0 +1,280 @@
+.videos-section,
+.instructors-home {
+    padding: 20px;
+    
+    h5 {
+        margin-bottom: 10px;
+    }    
+}
+
+.video-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.video-ov {
+    margin-bottom: 20px;
+    margin-right: 0.3%;
+    width: 100%;
+    @media screen and (min-width: 768px){
+        width: 49.5%;
+    }
+    @media screen and (min-width: 1200px){
+        width: 33%;
+    }
+    
+    @media screen and (min-width: 1400px){
+        width: 24.5%;
+    }
+
+    .thumbnail {
+        background: $bblue;
+        padding-top: 56%;
+        position: relative;
+        width: 100%;
+        .thumb-content {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .info {
+        align-items: center;
+        display: flex;
+        margin-top: 8px;
+        
+        .avatar {
+            border-radius: 50%;
+            height: 40px;
+            flex-shrink: 0;
+            margin-right: 5px;
+            overflow: hidden;
+            width: 40px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        
+        }
+
+        .details {
+            margin-right: auto;
+        }
+
+        &>a {
+            margin: 0;
+        }
+
+        h6 {
+            line-height: 13px;
+            margin: 0;
+        }
+        
+        p {
+            font-weight: 400;
+        }
+
+        sup {
+            display: block;
+            font-size: 10px;
+            font-weight: 300;
+            margin-top: 6px;
+        }
+        .stream-tag {
+            align-items: center;
+            border-radius: 2px;
+            border: 1px solid $red;
+            color: $red;
+            display: flex;
+            font-size: 9px;
+            font-weight: 600;
+            margin-top: 3px;
+            padding: 2px 4px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            img {
+                margin-right: 4px;
+                width: 14px;
+            }
+        }
+
+        button {
+            align-self: flex-start;
+            margin-left: auto;
+        }
+    }
+}
+
+.instructors-home {
+
+    &>div {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (min-width: 768px){
+            flex-direction: row;
+        }
+    }
+
+    .featured-instructor {
+        background: $bblue;
+        border: 1px solid $bblue2;
+        border-radius: 4px;
+        box-shadow: 0 0 5px 0 $bblue2;
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin: 0 5px 20px;
+        padding: 20px;
+        width: 100%;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+
+        &>a {
+            margin-top: auto;
+        }
+
+        @media screen and (min-width: 768px){
+            margin-bottom: 0;
+            width: 33%;
+        }
+
+        button {
+            margin-top: auto;
+        }
+
+        .instructor-info {
+            align-items: center;
+            display: flex;
+            margin-bottom: 10px;
+        
+            .avatar {
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 8px;
+                width: 50px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            .info {
+                h6 {
+                    margin: 0;
+                }
+                span {
+                    display: block;
+                    margin-top: -4px;
+                }
+            }
+        }
+
+        &>p {
+            color: $grey;
+            margin-bottom:20px;
+        }
+    }
+
+}
+
+.instructor-ad {
+    background: url('/images/backgrounds/instructor_ad.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0 0 8px 0 $grey;
+    margin: 40px 20px;
+    padding: 20px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+    h4,
+    p,
+    li {
+        color: $white;
+    }
+
+    ol {
+        margin: 10px 0 ;
+    }
+
+    li {
+        margin-bottom: 6px;
+    }
+}
+
+.tron {
+    align-items: flex-start;
+    background: $yellow1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+
+    @media screen and (min-width: 992px){
+        flex-direction: row;
+    }
+
+    // @media screen and (min-width: 1400px){
+    //     margin: 20px auto 20px;
+    //     max-width: 1000px;
+    // }
+
+    .video {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+        width: 100%;
+
+        @media screen and (min-width: 992px){
+            flex: 0 0 50%;
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+
+        video {
+            background: $bblue;
+            width: 100%;
+        }
+    }
+
+    .text {
+        h3 {
+             color: darken($yellow1, 70);
+             @media screen and (min-width: 1200px){
+                font-size: 24px;
+            }
+        }
+         p {
+             color: darken($yellow1, 50);
+             @media screen and (min-width: 1200px){
+                font-size: 16px;
+            }
+         }
+    }
+}

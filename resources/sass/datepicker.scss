@@ -1,0 +1,6 @@
+@import "flatpickr";
+@import 'variables';
+
+.form-control[readonly].flatpickr-input {
+    background-color: $white;
+}

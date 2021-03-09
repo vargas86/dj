@@ -1,0 +1,43 @@
+.subscription {
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid $lgrey;
+    box-shadow: 0 0 5px 0 lighten($sblue, 30);
+    display: flex;
+    padding: 8px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    
+    .avatar {
+        flex-shrink: 0;
+        height: 50px;
+        margin-right: 8px;
+        width: 50px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+    .body {
+        flex: 1;
+
+        h5 {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            color: $green;
+            font-size: 80%;
+            &.inactive {
+                color: $grey;
+            }
+        }
+        p {
+            font-size: 85%;
+        }
+    }
+
+}

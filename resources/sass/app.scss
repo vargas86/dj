@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700);
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/forms';
+@import '~bootstrap/scss/tables';
+
+
+//App files
+@import 'variables';
+@import 'app/general';
+@import 'app/layout';
+@import 'app/home';
+@import 'app/auth';
+@import 'app/courses';
+@import 'app/course';
+@import 'app/channels';
+@import 'app/user_channel';
+@import 'app/profile';
+@import 'app/live';
+@import 'app/instructors';
+@import 'app/subscriptions';
+@import 'app/search';
